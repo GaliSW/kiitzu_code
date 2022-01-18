@@ -1,0 +1,108 @@
+.we_do_blk {
+    width: 100%;
+    margin-top: 170px;
+    padding-top: 60px;
+    position: relative;
+    .we_bg {
+        height: 500px;
+        width: 1350px;
+        background: #6f7263;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .title {
+        max-width: 1200px;
+        font-family: Rufina;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 70px;
+        text-align: right;
+        // border: 1px solid red;
+        margin: 0 auto;
+        letter-spacing: 0.02em;
+        color: #f5f2e8;
+        margin-bottom: 90px;
+    }
+    .line {
+        width: 800px;
+        height: 1px;
+        background-color: #f5f2e8;
+        position: absolute;
+        right: 0;
+        top: 130px;
+        // margin-top: 10px;
+    }
+    .content_blk {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        div {
+            text-align: center;
+            width: 33%;
+            // border: 1px solid red;
+            h1 {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 47px;
+            }
+            p {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 40px;
+                color: #4f4f4f;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        .we_bg {
+            height: 240px;
+            width: 100%;
+        }
+        .content_blk {
+            flex-direction: column;
+            align-items: center;
+            div {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                width: 60%;
+                margin-bottom: 60px;
+                // border: 1px solid red;
+                h1 {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 32px;
+                    line-height: 37px;
+                    margin: 30px 0 20px 0;
+                }
+                p {
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #4f4f4f;
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        .title {
+            font-size: 30px;
+            line-height: 70px;
+            margin-right: 50px;
+        }
+        .line {
+            width: 200px;
+        }
+    }
+}

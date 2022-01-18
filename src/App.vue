@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+    <myHeader></myHeader>
+    <myBanner></myBanner>
+    <myPara></myPara>
+    <we-do></we-do>
+    <work></work>
+    <product></product>
+    <location></location>
+    <my-footer></my-footer>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import myHeader from "./components/header.vue";
+import myBanner from "./components/banner.vue";
+import myPara from "./components/top_para.vue";
+import weDo from "./components/we_do.vue";
+import work from "./components/work.vue";
+import product from "./components/product.vue";
+import location from "./components/location.vue";
+import myFooter from "./components/footer.vue";
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+    name: "App",
+    components: {
+        myHeader,
+        myBanner,
+        myPara,
+        weDo,
+        work,
+        product,
+        location,
+        myFooter,
+    },
 };
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/scss/style.css";
 </style>

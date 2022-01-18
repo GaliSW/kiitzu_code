@@ -1,0 +1,161 @@
+.product_blk {
+    max-width: 1200px;
+    margin: 300px auto 0 auto;
+    position: relative;
+    border-bottom: 1px solid #000;
+    @media (max-width: 1000px) {
+        margin: 150px auto 0 auto;
+    }
+    h1 {
+        font-family: Rufina;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 70px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin: 0;
+        @media (max-width: 1200px) {
+            font-size: 36px;
+            line-height: 40px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            border: 1px solid #000;
+            margin: 20px 0 40px 0;
+            @media (max-width: 1200px) {
+                width: 240px;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    .product_card {
+        width: 100%;
+        .product_wrapper {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            > div {
+                // border: 1px solid red;
+                width: 33%;
+                text-align: center;
+                margin-bottom: 30px;
+                position: relative;
+                cursor: pointer;
+                img {
+                    width: 90%;
+                    max-width: 360px;
+                }
+                .card_font {
+                    display: none;
+                }
+                &:hover .hover_blk {
+                    opacity: 1;
+                    height: 100%;
+                }
+            }
+            .hover_blk {
+                opacity: 0;
+                transition: all 0.5s linear;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%);
+                width: 90%;
+                height: 0%;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                @media (max-width: 1000px) {
+                    width: 100%;
+                }
+                .hover_content {
+                    border: 1px solid #fff;
+                    width: 90%;
+                    height: 90%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    h1 {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 50px;
+                        line-height: 59px;
+                        color: #fff;
+                        display: flex;
+                        margin: 20px;
+                        &::after {
+                            border: none;
+                        }
+                        @media (max-width: 1000px) {
+                            font-size: 16px;
+                            line-height: 30px;
+                            margin: 5px;
+                        }
+                    }
+                    > div {
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 24px;
+                        line-height: 28px;
+                        text-align: center;
+                        color: #f5f2e8;
+                        display: flex;
+                        @media (max-width: 1000px) {
+                            font-size: 16px;
+                            line-height: 20px;
+                            bottom: 10px;
+                            right: 10px;
+                        }
+                        div {
+                            margin: 5px;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1000px) {
+                padding: 0 50px;
+                justify-content: space-between;
+                > div {
+                    width: 45%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 5px;
+                    margin-bottom: 30px;
+                    height: 200%;
+                    border: 1px solid #808080;
+                    img {
+                        width: 95%;
+                        max-width: 360px;
+                    }
+                    .card_font {
+                        display: block;
+                        margin-top: 5px;
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 30px;
+                        text-align: right;
+                        color: #808080;
+                    }
+                }
+            }
+        }
+    }
+}
